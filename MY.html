@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="code_input">
+			<canvas id="canvas" width="300" height="150"></canvas>
+		</div>
+		<input type="text"  id="code_input"/>
+		<button id="my_button">验证</button>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas');
+		var ctx = canvas.getContext('2d');
+		ctx.strokeRect(0,0,300,150);
+		
+		
+		function randomNum(min, max) {
+			return Math.floor(Math.random() * (max - min) + min);
+		}
+		function getAllLetter() {
+			var letterStr = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z";
+			return letterStr.split(",");
+		}
+		for (var i = 0;i<4;i++) {
+			var j = randomNum(0,52);			
+			var num = getAllLetter();
+			var str = num[j] + str
+			
+		}
+		str = str.substr(0,4)
+	
+//		console.log(canvas.code)
+		ctx.font = 'bold 10px arial';
+    	ctx.fillStyle = 'red';
+    	ctx.fillText(str, 30,30);
+	</script>
+</html>
